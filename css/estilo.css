@@ -1,0 +1,37 @@
+*{
+    box-sizing: border-box;
+}
+/*
+body{
+    background-image: ; 
+}*/
+#contendor{
+    background-color: rgb(36, 4, 10);
+    margin: 5rem;
+    padding: 2rem 1rem;
+    border-radius: 1.5rem;
+}
+.encabezado{
+    background-color: rgb(127, 53, 67);
+    padding: 2rem 2rem;
+    border-radius: 1.5rem;
+}
+.navegador ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.navegador li{
+    display: inline-block;
+}
+.navegador a{
+    font-size: 1rem;
+    line-height: 2.2rem;
+    padding: 0.4rem 1rem;
+    text-align: center;
+    text-decoration: none;
+}
+.navegador a:link{
+    background-color: rgb(36, 4, 10);
+    color: rgb(127, 53, 67);
+}
