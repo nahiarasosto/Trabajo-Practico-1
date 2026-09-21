@@ -34,4 +34,38 @@ body{
 .navegador a:link{
     background-color: rgb(36, 4, 10);
     color: rgb(127, 53, 67);
+    border-radius: 1.5rem;
+}
+.navegador a:visited{
+    background-color:rgb(95, 11, 26);
+    color: rgb(36, 4, 10);
+}
+.navegador a:hover{
+    background-color:rgb(145, 18, 41);
+    color:rgb(36, 4, 10);
+}
+.navegador a:active{
+    background-color:rgb(182, 23, 52);
+    color: rgb(36, 4, 10);
+}
+section{
+    background-color: rgb(127, 53, 67);
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 1.5rem;
+}
+article{
+    text-align: left;
+    padding: 1rem;
+    margin: 1rem;
+}
+.piedepagina{
+    background-color: rgb(127, 53, 67);
+    padding: 2rem 2rem;
+    border-radius: 1.5rem;
+}
+.piedepagina address{
+    text-align: center;
+    text-decoration: none;
+    color: rgb(36, 4, 10);
 }
