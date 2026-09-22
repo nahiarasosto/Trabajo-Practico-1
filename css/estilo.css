@@ -5,6 +5,13 @@
 body{
     background-image: ; 
 }*/
+
+body {
+    background-color: rgb(7, 7, 10);
+    display: flex;
+    justify-content: center;
+}
+
 #contendor{
     background-color: rgb(36, 4, 10);
     margin: 5rem;
