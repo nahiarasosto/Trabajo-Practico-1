@@ -1,20 +1,20 @@
 *{
     box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
 }
-/*
 body{
-    background-image: ; 
-}*/
-#contendor{
-    background-color: rgb(36, 4, 10);
-    margin: 5rem;
-    padding: 2rem 1rem;
-    border-radius: 1.5rem;
+    background-color: orangered; 
+}
+#contenedor{
+    background-color: rgb(227, 223, 219);
+    padding: 3.5rem;
+    border-radius: 0.5rem;
 }
 .encabezado{
-    background-color: rgb(127, 53, 67);
-    padding: 2rem 2rem;
-    border-radius: 1.5rem;
+    padding: 3.5rem 2rem;
+    background-color: orangered;
+    text-align: center;
 }
 .navegador ul{
     margin: 0;
@@ -32,20 +32,15 @@ body{
     text-decoration: none;
 }
 .navegador a:link{
-    background-color: rgb(36, 4, 10);
-    color: rgb(127, 53, 67);
-    border-radius: 1.5rem;
-}
-.navegador a:visited{
-    background-color:rgb(95, 11, 26);
     color: rgb(36, 4, 10);
 }
+.navegador a:visited{
+    color: rgb(95, 11, 26);
+}
 .navegador a:hover{
-    background-color:rgb(145, 18, 41);
-    color:rgb(36, 4, 10);
+    color:rgb(145, 18, 41);
 }
 .navegador a:active{
-    background-color:rgb(182, 23, 52);
     color: rgb(36, 4, 10);
 }
 section{
@@ -58,6 +53,9 @@ article{
     text-align: left;
     padding: 1rem;
     margin: 1rem;
+}
+.columnas{
+    display: flex;
 }
 .piedepagina{
     background-color: rgb(127, 53, 67);
