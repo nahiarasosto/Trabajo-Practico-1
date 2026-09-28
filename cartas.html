@@ -1,39 +1,73 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <title>Bienvenido</title>
-        <link href="./css/estilo.css" rel="stylesheet">
-    </head>
-    <body>
-        <div id="contenedor">
-            <header class="encabezado">
-                <nav class="navegador">
-                    <h1>Pagina de Juegos</h1>
-                    <p>Bienvenidx a *nombre de pagina de juegos*, aqui puede acceder a varios juegos y ver tu puntacion en las paginas linkeadas de abajo, disfruta!!!</p>
-                    <ul>
-                        <li><a href="index.html">Bienvenidx</a></li>
-                        <li><a href="preguntas.html">Juego de preguntas</a></li>
-                        <li><a href="cartas.html">Juego de cartas</a></li>
-                        <li><a href="dados.html">Juego de dados</a></li>
-                        <li><a href="tablero.html">Tablero de puntuaciones</a></li>
-                        <li><a href="integrantes.html">Creadoras del sitio</a></li>
-                    </ul>
-                </nav>
-            </header>
-            <main>
-                <section>
-                    <article>
-                        <h1>Juego de cartas</h1>
-                        <p>Sintesis del juego</p>
-                        <h2>Reglas</h2>
-                        <ul>
-                            <li></li>
-                        </ul>
-                    </article>
-                </section>
-            </main>
-        </div>
-        <script src="js/cartas.js"></script>
-    </body>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Juego de cartas - Casita Robada</title>
+    <link href="./css/estilo.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="contenedor">
+        <header class="encabezado">
+            <h1>Casita Robada</h1>
+            <p class="subtitulo">El gran desafío: Hombre vs Máquina</p>
+            <nav class="navegador">
+                <ul>
+                    <li><a href="index.html">Bienvenidx</a></li>
+                    <li><a href="preguntas.html">Juego de preguntas</a></li>
+                    <li><a href="cartas.html">Juego de cartas</a></li>
+                    <li><a href="dados.html">Juego de dados</a></li>
+                    <li><a href="tablero.html">Tablero de puntuaciones</a></li>
+                    <li><a href="integrantes.html">Creadoras del sitio</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- SECCIÓN DE REGLAS -->
+
+        <section class="seccionReglas">
+            <h2>¿Cómo se juega?</h2>
+            <p>Tu objetivo es <strong>acumular más cartas</strong> que tu oponente, la IA, antes de que se agote el mazo
+                principal</p>
+            <article>
+                <h3>Acciones para cada jugador</h3>
+                <p>En cada turno, ambos lados podrán...</p>
+                <ul>
+                    <li><strong>Robar de la mesa:</strong> Si una carta tiene el mismo número que una carta del centro,
+                        se suman las dos cartas a la casita.</li>
+                    <li><strong>Robar al oponente:</strong> Si una carta tiene el mismo número que la carta sobre la
+                        casita del oponente, se roba la casa llena.</li>
+                    <li><strong>Descartar obligatoriamente:</strong> Si ninguna carta coincide con la mesa o con la
+                        casita del
+                        oponente, se debe tirar una carta al centro para continuar.</li>
+                </ul>
+            </article>
+            <article>
+                <h4>Como funciona el juego y como se gana</h4>
+                <ul>
+                    <li>Tanto vos como la IA reciben <strong>5 cartas obtenidas de forma aleatoria</strong>. Habrán 4
+                        cartas en el centro y 4 lugares vacíos. Y por último, un mazo para barajar nuevas cartas.</li>
+                    <li>Cuando ambos lados se queden sin cartas, comenzará la siguiente ronda.</li>
+                    <li><strong>Se gana cuando</strong> el mazo quede vacío,¡Quién tenga más punto gana!</li>
+                </ul>
+            </article>
+
+            <!-- BOTÓN PARA COMENZAR -->
+
+            <article>
+                <p>¿Estás listo para desafiar a la Inteligencia Artificial?</p>
+                <button type="button" name="botonComenzar">Iniciar Nueva Partida</button>
+            </article>
+        </section>
+
+        <!-- FOOTER -->
+
+        <footer class="piedepagina">
+                <address>Para contactarse con nosotros escribir a <a href="mailto:@gmail.com">@gmail.com</a></address>
+            </footer>
+    </div>
+    <script src="js/cartas.js"></script>
+</body>
+
 </html>

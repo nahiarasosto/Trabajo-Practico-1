@@ -4,12 +4,29 @@
     font-weight: 300;
 }
 body{
+<<<<<<< HEAD
     background-color: orangered; 
 }
 #contenedor{
     background-color: rgb(227, 223, 219);
     padding: 3.5rem;
     border-radius: 0.5rem;
+=======
+    background-image: ; 
+}*/
+
+body {
+    background-color: rgb(7, 7, 10);
+    display: flex;
+    justify-content: center;
+}
+
+#contendor{
+    background-color: rgb(36, 4, 10);
+    margin: 5rem;
+    padding: 2rem 1rem;
+    border-radius: 1.5rem;
+>>>>>>> d5e6cb7159716d66012abe592f5c7cd10a74d135
 }
 .encabezado{
     padding: 3.5rem 2rem;
