@@ -83,6 +83,15 @@ button{
     color: rgb(31, 31, 81) ;
     background-color: rgb(155, 155, 220);
 }
+.imagenIcon{
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    padding: auto;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .columnas{
     display: flex;
 }
