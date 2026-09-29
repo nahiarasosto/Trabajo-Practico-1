@@ -58,6 +58,31 @@ article{
     padding: 1rem;
     margin: 1rem;
 }
+button{
+    display: inline-block;
+    border-radius: 0.5rem;
+    font-size: medium;
+    margin: 4px 2px;
+    padding: 10px 20px;
+    border: none;
+    color: rgb(31, 31, 81);
+    background-color: rgb(155, 155, 220);
+}
+.centrado{
+    text-align: center;
+}
+/*"Botones" del index*/
+.botonA{
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-size: medium;
+    margin: 4px 2px;
+    padding: 10px 20px;
+    color: rgb(31, 31, 81) ;
+    background-color: rgb(155, 155, 220);
+}
 .columnas{
     display: flex;
 }
