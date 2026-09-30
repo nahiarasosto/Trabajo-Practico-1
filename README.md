@@ -3,7 +3,7 @@ Repositorio del TP1 de Informática General
 
 Nombre del proyecto: Cachín
 
-Integrantes del grupo:
+Integrantes del grupo:  
 Nahiara Aylen Sosto  
 Maria Luz Gomez  
 Maitena Achigar  
