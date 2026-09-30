@@ -1,64 +1,97 @@
-*{box-sizing: border-box;}
-body{
+* {
+    box-sizing: border-box;
+}
+
+body {
     margin: 0;
     padding: 0;
     font-family: "Ubuntu", sans-serif;
     background-image: url(../imagenes/fondo-3.jpg);
 }
-#contenedor{
+
+#contenedor {
     width: 100%;
     max-width: 960px;
     margin: 0 auto;
     color: rgb(155, 155, 220);
     background-color: rgb(155, 155, 220);
 }
-.encabezado, .piedepagina{
-    padding:1rem;
+
+/* Encabezado y pie de página */
+
+.encabezado,
+.piedepagina {
+    padding: 1rem;
     text-align: center;
     background-color: rgb(31, 31, 81);
 }
-.encabezado h1{
+
+.encabezado h1 {
     font-size: 3rem;
 }
-.navegador ul{
+
+/* Navegador */
+
+.navegador ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
 }
-.navegador li{
+
+.navegador li {
     display: inline-block;
 }
-.navegador a{
+
+.navegador a {
     font-size: 1rem;
     line-height: 2.2rem;
     padding: 0.4rem 1rem;
     text-align: center;
     text-decoration: none;
 }
-.navegador a:link{
+
+.navegador a:link {
     color: rgb(155, 155, 220);
+    background-color: darkslateblue;
+    border-radius: 1rem;
 }
-.navegador a:visited{
-    color: rgb(111, 111, 156);
+
+.navegador a:visited {
+    color: rgb(12, 12, 22);
+    background-color: darkslateblue;
+    border-radius: 1rem;
 }
-.navegador a:hover{
-    color: rgb(54, 54, 75);
+
+.navegador a:hover {
+    color: rgb(94, 94, 240);
+    background-color: rgb(205, 203, 219);
+    border-radius: 1rem;
 }
-.navegador a:active{
-    color:rgb(22, 22, 37);
+
+.navegador a:active {
+    color: rgb(230, 230, 252);
+    background-color: rgb(22, 17, 53);
+    border-radius: 1rem;
 }
-section{
+
+/* Bloques de texto */
+
+section {
     padding: 1rem;
     margin: 1rem;
     border-radius: 0.5rem;
     background-color: rgb(31, 31, 81);
 }
-article{
+
+article {
     text-align: left;
     padding: 1rem;
     margin: 1rem;
 }
-button{
+
+/* Extras */
+
+button {
     display: inline-block;
     border-radius: 0.5rem;
     font-size: medium;
@@ -68,11 +101,14 @@ button{
     color: rgb(31, 31, 81);
     background-color: rgb(155, 155, 220);
 }
-.centrado{
+
+.centrado {
     text-align: center;
 }
-/*"Botones" del index*/
-.botonA{
+
+/* "Botones" del index */
+
+.botonA {
     display: inline-block;
     text-align: center;
     text-decoration: none;
@@ -80,10 +116,13 @@ button{
     font-size: medium;
     margin: 4px 2px;
     padding: 10px 20px;
-    color: rgb(31, 31, 81) ;
+    color: rgb(31, 31, 81);
     background-color: rgb(155, 155, 220);
 }
-.imagenIcon{
+
+/* Imágenes de iconos */
+
+.imagenIcon {
     aspect-ratio: 1 / 1;
     border-radius: 50%;
     padding: auto;
@@ -92,13 +131,22 @@ button{
     align-items: center;
     justify-content: center;
 }
-.columnas{
+
+.columnas {
     display: flex;
 }
-.piedepagina address{
+
+/* pie de página */
+
+.piedepagina address {
     text-align: center;
     text-decoration: none;
 }
-.piedepagina address:a{
-    color:rgb(68, 68, 97);
+
+.piedepagina address a:link {
+    color: rgb(230, 230, 252);
+}
+
+.piedepagina address a:hover {
+    color: rgb(12, 12, 22);
 }
