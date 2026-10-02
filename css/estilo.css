@@ -19,8 +19,7 @@ body {
 
 /* Encabezado y pie de página */
 
-.encabezado,
-.piedepagina {
+.encabezado, .piedepagina {
     padding: 1rem;
     text-align: center;
     background-color: rgb(31, 31, 81);
@@ -53,25 +52,22 @@ body {
 .navegador a:link {
     color: rgb(155, 155, 220);
     background-color: darkslateblue;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
 }
 
 .navegador a:visited {
     color: rgb(12, 12, 22);
     background-color: darkslateblue;
-    border-radius: 1rem;
 }
 
 .navegador a:hover {
     color: rgb(94, 94, 240);
     background-color: rgb(205, 203, 219);
-    border-radius: 1rem;
 }
 
 .navegador a:active {
     color: rgb(230, 230, 252);
     background-color: rgb(22, 17, 53);
-    border-radius: 1rem;
 }
 
 /* Bloques de texto */
