@@ -101,6 +101,12 @@ button {
     border: none;
     color: rgb(31, 31, 81);
     background-color: rgb(155, 155, 220);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(94, 94, 240);
+    color: white;
 }
 
 .centrado {
@@ -150,4 +156,41 @@ button {
 
 .piedepagina address a:hover {
     color: rgb(94, 94, 240);
+}
+
+/* --- ESTILOS ESPECÍFICOS PARA EL JUEGO DE DADOS --- */
+
+.dados-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 25px 0;
+}
+
+.dado-box {
+    text-align: center;
+    font-weight: bold;
+    color: rgb(155, 155, 220);
+}
+
+.dado-box img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    margin-top: 8px;
+}
+/* --- Animación simple de giro para los dados --- */
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.girando {
+    animation: girar 1s ease-in-out;
 }
