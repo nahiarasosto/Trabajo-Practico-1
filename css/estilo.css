@@ -66,7 +66,7 @@ body {
 }
 
 .navegador a:active {
-    color: rgb(255, 195, 0);
+    color: rgb(255, 214, 102);
     background-color: rgb(22, 17, 53);
 }
 
@@ -100,7 +100,7 @@ button {
     padding: 10px 20px;
     border: none;
     color: rgb(31, 31, 81);
-    background-color: rgb(255, 107, 0);
+    background-color: rgb(255, 164, 108);
 }
 
 .centrado {
@@ -149,7 +149,7 @@ button {
 }
 
 .piedepagina address a:hover {
-    color: rgb(255, 195, 0);
+    color: rgb(255, 214, 102);
 }
 
 /* Juego de cartas */
@@ -194,7 +194,7 @@ button {
 .contenedorJuego h3 {
     margin-top: 0;
     margin-bottom: 1rem;
-    color: rgb(255, 195, 0);
+    color: rgb(255, 214, 102);
     font-size: 1.2rem;
 }
 
@@ -260,16 +260,16 @@ button {
 
 .seccionGameOver h2 {
     margin-top: 0;
-    color: rgb(255, 195, 0);
+    color: rgb(255, 214, 102);
 }
 
 .ganadorMensaje {
-    color: rgb(255, 195, 0);
+    color: rgb(255, 214, 102);
     font-weight: bold;
 }
 
 .perdedorMensaje {
-    color: rgb(255, 107, 0);
+    color: rgb(255, 164, 108);
     font-weight: bold;
 }
 
