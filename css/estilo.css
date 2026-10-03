@@ -69,7 +69,7 @@ body {
 }
 
 .navegador a:active {
-    color: rgb(230, 230, 252);
+    color: rgb(255, 195, 0);
     background-color: rgb(22, 17, 53);
     border-radius: 1rem;
 }
@@ -104,7 +104,7 @@ button {
     padding: 10px 20px;
     border: none;
     color: rgb(31, 31, 81);
-    background-color: rgb(155, 155, 220);
+    background-color: rgb(255, 107, 0);
 }
 
 .centrado {
@@ -153,5 +153,131 @@ button {
 }
 
 .piedepagina address a:hover {
-    color: rgb(94, 94, 240);
+    color: rgb(255, 195, 0);
+}
+
+/* Juego de cartas */
+
+.contenedorJuego {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    background-color: rgb(22, 17, 53);
+    width: 100%;
+}
+
+.contenedorJugador,
+.contenedorIA,
+.contenedorMesa {
+    width: 95%;
+    background-color: rgb(31, 31, 81);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 0.125rem solid rgb(155, 155, 220);
+}
+
+.contenedorIA {
+    order: 1;
+}
+
+.contenedorMesa {
+    order: 2;
+}
+
+.contenedorJugador {
+    order: 3;
+}
+
+.contenedorJuego h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: rgb(255, 195, 0);
+    font-size: 1.2rem;
+}
+
+.manoJugador,
+.manoIA,
+.mesaCartas,
+.cartasCasitaContenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+    width: 100%;
+    background-color: rgba(22, 17, 53, 0.4);
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+}
+
+.cartaVisual {
+    width: 4rem;
+    flex: 0 0 auto;
+}
+
+.cartaVisual img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.casitaJugador p,
+.casitaIA p,
+.manoJugador p,
+.manoIA p {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: rgb(155, 155, 220);
+    margin: 0;
+    text-align: center;
+}
+
+/* Botones del jugador */
+
+.botonesJugador {
+    display: flex;
+    gap: 0.25rem;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+/* Pantalla final */
+
+.seccionGameOver {
+    background-color: rgb(22, 17, 53);
+    border: 0.125rem solid rgb(155, 155, 220);
+    color: rgb(230, 230, 252);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    max-width: 500px;
+    margin: 2rem auto;
+}
+
+.seccionGameOver h2 {
+    margin-top: 0;
+    color: rgb(255, 195, 0);
+}
+
+.ganadorMensaje {
+    color: rgb(255, 195, 0);
+    font-weight: bold;
+}
+
+.perdedorMensaje {
+    color: rgb(255, 107, 0);
+    font-weight: bold;
+}
+
+.empateMensaje {
+    color: rgb(155, 155, 220);
+    font-weight: bold;
 }

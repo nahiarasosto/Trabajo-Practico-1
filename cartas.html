@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Bienvenido</title>
+    <title>Juego de cartas</title>
     <link href="./css/estilo.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +16,7 @@
     <div id="contenedor">
         <header class="encabezado">
             <nav class="navegador">
-                <h1><strong>Cachín</strong></h1>
+                <h1><strong>✨Cachín✨</strong></h1>
                 <p class="subtitulo">¡Diversión y competencia en un solo lugar!</p>
                 <ul>
                     <li><a href="index.html">Bienvenidx</a></li>
@@ -30,45 +30,99 @@
         </header>
 
         <!-- SECCIÓN DE REGLAS -->
+
         <main>
             <section class="seccionReglas">
-                <h2>¿Cómo se juega?</h2>
-                <p>Tu objetivo es <strong>acumular más cartas</strong> que tu oponente, la IA, antes de que se agote el
-                    mazo
-                    principal</p>
+                <h2>Casita Robada: Humano vs Máquina</h2>
+                <p>¡Tu objetivo es <strong>acumular más cartas</strong> que tu oponente, la IA, hasta que ambos se
+                    queden sin cartas y no queden suficientes en el mazo para repartir!</p>
                 <article>
                     <h3>Acciones para cada jugador</h3>
-                    <p>En cada turno, ambos lados podrán...</p>
+                    <p>En cada turno, el jugador (y la IA) podrá...</p>
                     <ul>
-                        <li><strong>Robar de la mesa:</strong> Si una carta tiene el mismo número que una carta del
-                            centro,
-                            se suman las dos cartas a la casita.</li>
-                        <li><strong>Robar al oponente:</strong> Si una carta tiene el mismo número que la carta sobre la
+                        <li><strong>Robar de la mesa ("Robar Carta"):</strong> Si una carta de tu mano tiene el mismo
+                            número que una carta del
+                            centro, se suman las dos cartas a la casita.</li>
+                        <li><strong>Robar al oponente ("Robar Oponente"):</strong> Si una carta de tu mano tiene el
+                            mismo número que la carta sobre la
                             casita del oponente, se roba la casa llena.</li>
-                        <li><strong>Descartar obligatoriamente:</strong> Si ninguna carta coincide con la mesa o con la
-                            casita del
-                            oponente, se debe tirar una carta al centro para continuar.</li>
+                        <li><strong>Descartar ("Descartar"):</strong> Podés descartar una carta de tu mano al centro
+                            de la mesa. Advertencia: también podrás hacerlo aunque tengas una jugada disponible.</li>
                     </ul>
                 </article>
                 <article>
                     <h4>Como funciona el juego y como se gana</h4>
                     <ul>
-                        <li>Tanto vos como la IA reciben <strong>5 cartas obtenidas de forma aleatoria</strong>. Habrán
-                            4
-                            cartas en el centro y 4 lugares vacíos. Y por último, un mazo para barajar nuevas cartas.
+                        <li>Tanto vos como la IA reciben <strong>6 cartas obtenidas de forma aleatoria</strong>. Se
+                            colocan 4 cartas en el centro y las restantes forman el mazo.
                         </li>
-                        <li>Cuando ambos lados se queden sin cartas, comenzará la siguiente ronda.</li>
-                        <li><strong>Se gana cuando</strong> el mazo quede vacío,¡Quién tenga más punto gana!</li>
+                        <li>Cuando ambos se queden sin cartas, se repartirán seis cartas nuevas a cada uno si quedan al
+                            menos 12 cartas en el mazo. Si quedan menos de 12, la partida termina.</li>
+                        <li><strong>La partida termina</strong> cuando ambos se quedan sin cartas y quedan menos de 12
+                            cartas en el mazo. Gana quien tenga más cartas en su casita!</li>
                     </ul>
                 </article>
+
                 <!-- BOTÓN PARA COMENZAR -->
+
                 <article>
                     <p>¿Estás listo para desafiar a la Inteligencia Artificial?</p>
-                    <button type="button" name="botonComenzar">Iniciar Nueva Partida</button>
+                    <button type="button" name="botonComenzar" class="botonComenzar">Iniciar Nueva Partida</button>
                 </article>
             </section>
+
+            <!-- JUEGO -->
+            <section class="seccionJuego">
+                <h2 class="tituloJuego">¡A jugar!</h2>
+                <div class="contenedorJuego">
+                    <p class="avisoTurno"></p>
+                    <article class="contenedorJugador">
+                        <h3>VOS</h3>
+                        <div class="casitaJugador">
+                            <p>TU CASITA (0 cartas)</p>
+                            <div class="cartasCasitaContenedor"></div>
+                        </div>
+                        <div class="manoJugador" id="manoJugador">
+                            <p>TU MANO</p>
+                        </div>
+                        <div class="botonesJugador">
+                            <button type="button" class="botonRobarCarta">Robar Carta</button>
+                            <button type="button" class="botonRobarOponente">Robar Oponente</button>
+                            <button type="button" class="botonDescartar">Descartar</button>
+                        </div>
+                    </article>
+                    <article class="contenedorMesa">
+                        <h4>MESA</h4>
+                        <div class="mesaCartas">
+                            <p id="contenedorMazo">Cartas restantes en el mazo: 40</p>
+                            <div class="cartasCasitaContenedor" id="cartasMesa"></div>
+                        </div>
+                    </article>
+                    <article class="contenedorIA">
+                        <h5>IA</h5>
+                        <div class="casitaIA">
+                            <p>CASITA DE LA IA (0 cartas)</p>
+                            <div class="cartasCasitaContenedor"></div>
+                        </div>
+                        <div class="manoIA" id="manoIA">
+                            <p>MANO DE LA IA</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- PANTALLA FIN DE JUEGO -->
+            <section id="seccionGameOver" class="seccionGameOver">
+                <h5>¡Partida Concluida!</h5>
+                <p id="resultadoTexto"></p>
+                <button type="button" class="botonReiniciar">Jugar de Nuevo</button>
+            </section>
         </main>
+
+        </main>
+
         <!-- FOOTER -->
+
         <footer class="piedepagina">
             <address>Estas interesadx en contratarnos para un evento? Para contactarse con nosotros escribe a <a
                     href="mailto:cachinEventos@gmail.com">cachinEventos@gmail.com</a></address>
