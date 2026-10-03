@@ -26,6 +26,9 @@ seccionGameOver.style.display = 'none';
 
 botonComenzar.addEventListener('click', iniciarPartida);
 botonReiniciar.addEventListener('click', reiniciarPartida);
+botonRobarCarta.addEventListener('click', robarDeMesa);
+botonRobarOponente.addEventListener('click', robarCasitaIA);
+botonDescartar.addEventListener('click', descartarCarta);
 
 /* Preparación de la partida: mazos y reparto de cartas */
 
