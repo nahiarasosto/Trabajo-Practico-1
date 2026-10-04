@@ -29,7 +29,7 @@
             </header>
             <!--MAIN-->
             <main>
-                <section id="ocultarPag">
+                <section id="pantallaReglas">
                     <article>
                         <h1>Trivia</h1>
                         <p>Bienvenidx al juego de preguntas. Esta es una trivia sobre preguntas de <strong>Cultura General</strong>. Lee las reglas antes de comenzar una nueva partida.</p>
@@ -45,8 +45,18 @@
                         <button type="button" id="botonInicioPreg"><strong>¡Comienza a jugar!</strong></button>
                     </article>
                 </section>
-                <section id="seccionJuegoPreg">
-
+                <section id="pantallaJuego" hidden>
+                    <p id="progreso"></p>
+                    <p id="temporizador"></p>
+                    <h2 id="pregunta"></h2>
+                    <div id="opciones"></div>
+                    <p id="resultado"></p>
+                    <button type="button" id="botonSiguiente"><strong>Siguiente pregunta</strong></button>
+                </section>
+                <section id="pantallaResultados" hidden>
+                    <p id="resultadoFinal"></p>
+                    <p id="respuestasCorrectas"></p>
+                    <button type="button" id="botonReiniciar"><strong>Jugar nuevamente</strong></button>
                 </section>
             </main>
             <!--PIE DE PAGINA-->
