@@ -46,12 +46,12 @@ imagenes: imgJuegoCartas, fondo-3,jpg, iconMai.jpg, iconMari.jpg, iconNahi.jpg
 js: cartas.js, dados.js, preguntas.js, script.js, tablero.js  
 
 Tecnologías utilizadas:  
-VScode  Copilot SDK, Chat GPT
+VScode  Copilot SDK, Chat GPT, Gemini
 
-Declaración de uso de IA: 
+Declaración de uso de IA: Se uso la IA, diferente en cada participante, para poder coregir errores de codigo el codigo y para entendimiento del mismo en algunos casos. En el juego de preguntas usamos de codigo base el ejemplo dado en la clase numero 16, donde mostraban un juego de preguntas similar y le pedimos a la IA que nos lo explicara para poder adaptarlo a las reglas de la Trivia que habiamos establecido. Tambien en varias instancias de la escritura del codigo le solicitamos a traves de un promt que nos reconmendara maneras de corregir un codigo que no funcionaba, siempre respetando lo aprendido en clases de JS y indicandole que no se deberia usar codigo no conocido. 
 
 Descripción de las principales funcionalidades:
 
-API utilizada:
+API utilizada: https://opentdb.com/api_config.php
 
 Principales decisiones técnicas:

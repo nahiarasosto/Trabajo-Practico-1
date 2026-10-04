@@ -100,7 +100,7 @@ button {
     padding: 10px 20px;
     border: none;
     color: rgb(31, 31, 81);
-    background-color: rgb(255, 164, 108);
+    background-color: rgb(155, 155, 220);
 }
 
 .centrado {
@@ -149,7 +149,7 @@ button {
 }
 
 .piedepagina address a:hover {
-    color: rgb(255, 214, 102);
+    color: rgb(155, 155, 220);
 }
 
 /* Juego de cartas */
@@ -194,7 +194,7 @@ button {
 .contenedorJuego h3 {
     margin-top: 0;
     margin-bottom: 1rem;
-    color: rgb(255, 214, 102);
+    color: rgb(155, 155, 220);
     font-size: 1.2rem;
 }
 
