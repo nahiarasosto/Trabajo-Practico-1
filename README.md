@@ -17,7 +17,12 @@ Descripción general del sitio:
 Descripción y reglas de cada juego:  
   
 Juego de preguntas  
-  
+El juego de preguntas es una clásica Trivia de Cultura General que consta de 10 preguntas. Cada pregunta debe ser respondida antes de que termine el temporizador de 15 segundos y cuenta con 4 opciones, de las cuales solo una es correcta.
+
+Cuando la respuesta es correcta, se suman puntos según el tiempo restante: 150 puntos si quedan entre 11 y 15 segundos, 125 puntos si quedan entre 6 y 10 segundos y 100 puntos si quedan entre 1 y 5 segundos. Si la respuesta es incorrecta o se termina el tiempo, no se suman puntos.
+
+Al finalizar las 10 preguntas, se muestra el puntaje final, junto con la cantidad de respuestas correctas e incorrectas, y se puede comenzar una nueva partida.
+
 Juego de cartas  
 El juego de cartas se basa en las reglas del clásico juego "Casita Robada", adaptadas para ofrecer una experiencia "Humano vs Maquina". Las reglas son las siguientes:  
 Objetivo: acumular más cartas que el oponente hasta que ambos se queden sin cartas y no queden suficientes en el mazo para repartir.  
@@ -34,16 +39,16 @@ Juego de dados
 
 
 Organización de archivos y carpetas:  
-Trabajo-Practico-1  
+Trabajo-Practico-1
 cartas.html, dados.html, index.html, integrantes.html, preguntas.html, tablero.html, README.md  
 css: estilos.css  
 imagenes: imgJuegoCartas, fondo-3,jpg, iconMai.jpg, iconMari.jpg, iconNahi.jpg  
 js: cartas.js, dados.js, preguntas.js, script.js, tablero.js  
 
 Tecnologías utilizadas:  
-VScode  Copilot SDK 
+VScode  Copilot SDK, Chat GPT
 
-Declaración de uso de IA:
+Declaración de uso de IA: 
 
 Descripción de las principales funcionalidades:
 

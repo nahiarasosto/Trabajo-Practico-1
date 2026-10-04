@@ -17,7 +17,7 @@ const resultado = document.querySelector('#resultado');
 const resultadoFinal = document.querySelector('#resultadoFinal');
 let respuestasCorrectas = document.querySelector('#respuestasCorrectas');
 //API
-const urlApi ='https://opentdb.com/api.php?amount=10&category=9&difficulty=medium&type=multiple';
+const urlApi = 'https://opentdb.com/api.php?amount=10&category=9&difficulty=medium&type=multiple&encode=url3986';
 //Juego
 let preguntas = [];
 let preguntaActual = 0;
@@ -25,8 +25,15 @@ let puntaje = 0;
 let correctas = 0;
 let tiempo = 15;
 let timer;
-
-//Funcion para que al apretar el boton aparezca una pantalla en donde se muestre el mensaje
+//
+function decodificar(texto){
+    returndecodeURIComponent(texto);
+}
+//Fuuncion para mezclar opciones
+function mezclar(arreglo){
+    return[...arreglo].sort(() => Math.random() - 0.5);
+}
+//Funcion para iniciar el juego
 function iniciarJuego(){
     pagInfo.style.display = 'none';
     pagJuego.hidden = false;
@@ -41,7 +48,15 @@ async function cargarPreguntas() {
             throw new Error(`HTTP ${respuesta.status}`);
         }
         const datos = await respuesta.json();
-        console.log(datos);
+        preguntas = datos.results.map((pregunta) => ({
+            texto: pregunta.question,
+            correcta: pregunta.correct_answer,
+            opciones: mezclar([
+                pregunta.correct_answer,
+                ...pregunta.incorrect_answer
+            ])
+        }))
+        console.log(preguntas);
     }
     catch (error) {
         console.log('No se pudieron cargar las respuestas')
