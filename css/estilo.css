@@ -102,7 +102,12 @@ button {
     color: rgb(31, 31, 81);
     background-color: rgb(155, 155, 220);
 }
-
+img{
+    display: block;
+    margin: auto;
+    border-radius:0.5rem;
+    max-width: 50%;
+}
 .centrado {
     text-align: center;
 }
