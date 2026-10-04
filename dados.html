@@ -29,22 +29,47 @@
             </header>
             <!--MAIN-->
             <main>
-                <section>
+                <section style="position: relative;">
                     <article>
+                        <!-- Contador de racha con el formato actual / meta -->
+                        <div id="racha" class="badge-racha">🔥 Racha: 0 / 5</div>
+
                         <h1>Juego de dados</h1>
-                        <p>Sintesis del juego</p>
-                        <h2>Reglas</h2>
+                        <p>¡Suma 7 o más con los dos dados en cada tirada!</p>
+                        
+                        <h2>Reglas y Funcionamiento</h2>
                         <ul>
-                            <li></li>
+                            <li>Se tiran 2 dados al mismo tiempo.</li>
+                            <li>Cada suma de 7 o más aumenta tu racha de victorias.</li>
+                            <li><strong>Meta del juego:</strong> Consigue <strong>5 rachas seguidas</strong> para ganar la partida completa. Si obtienes menos de 7 en una tirada, ¡la racha se reinicia a 0!</li>
                         </ul>
+
+                        <!-- Botón para iniciar / jugar -->
+                        <button id="btn-comenzar">¡Comienza a jugar!</button>
+
+                        <!-- Contenedor del juego -->
+                        <div id="juego-container" style="margin-top: 20px;">
+                            <div class="dados-container">
+                                <img id="dado1" src="imagenes/imgDados/dado_1.png" alt="Dado Blanco" width="100">
+                                <img id="dado2" src="imagenes/imgDados/dadon_1.png" alt="Dado Negro" width="100">
+                            </div>
+                            <h2 id="resultado">¡Tira los dados!</h2>
+                        </div>
+
+                        <!-- Pantalla de Victoria (Se muestra al completar las 5 rachas) -->
+                        <div id="pantalla-victoria" class="pantalla-victoria oculto">
+                            <div class="victoria-contenido">
+                                <h2>🎉 ¡Felicidades, ganaste! 🎉</h2>
+                                <p>¡Lograste completar las 5 rachas seguidas de forma imparable!</p>
+                                <button id="btn-reiniciar-juego">Jugar de nuevo</button>
+                            </div>
+                        </div>
                     </article>
                 </section>
             </main>
-            <!--PIE DE PAGINA-->
-            <footer class="piedepagina">
-                <address>Estas interesadx en contratarnos para un evento? Para contactarse con nosotros escribe a <a href="mailto:cachinEventos@gmail.com">cachinEventos@gmail.com</a></address>
-            </footer>
         </div>
+
+        <!-- ARCHIVO DE JAVASCRIPT -->
         <script src="js/dados.js"></script>
     </body>
 </html>
