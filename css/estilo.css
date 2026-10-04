@@ -109,7 +109,12 @@ button:hover {
     background-color: rgb(94, 94, 240);
     color: white;
 }
-
+img{
+    display: block;
+    margin: auto;
+    border-radius:0.5rem;
+    max-width: 50%;
+}
 .centrado {
     text-align: center;
 }
