@@ -3,7 +3,7 @@
     <!--HEAD-->
     <head>
         <meta charset="UTF-8">
-        <title>Bienvenido</title>
+        <title>Trivia</title>
         <link href="./css/estilo.css" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,19 +29,34 @@
             </header>
             <!--MAIN-->
             <main>
-                <section>
+                <section id="pantallaReglas">
                     <article>
-                        <h1>Juego de preguntas</h1>
-                        <p>Sintesis del juego</p>
+                        <h1>Trivia</h1>
+                        <p>Bienvenidx al juego de preguntas. Esta es una trivia sobre preguntas de <strong>Cultura General</strong>. Lee las reglas antes de comenzar una nueva partida.</p>
                         <h2>Reglas</h2>
                         <ul>
-                            <li></li>
+                            <li>La partida tendrá 10 preguntas.</li>
+                            <li>Cada pregunta tendrá 4 opciones.</li>
+                            <li>Solo una opción será correcta.</li>
+                            <li>Tendrás 15 segundos para responder cada pregunta.</li>
+                            <li>Las respuestas correctas suman puntos.</li>
+                            <li>Al finalizar la partida podrás ver tu puntaje.</li>
                         </ul>
                         <button type="button" id="botonInicioPreg"><strong>¡Comienza a jugar!</strong></button>
                     </article>
                 </section>
-                <section id="seccionJuegoPreg">
-
+                <section id="pantallaJuego" hidden>
+                    <p id="progreso"></p>
+                    <p id="temporizador"></p>
+                    <h2 id="pregunta"></h2>
+                    <div id="opciones"></div>
+                    <p id="resultado"></p>
+                    <button type="button" id="botonSiguiente" hidden><strong>Siguiente pregunta</strong></button>
+                </section>
+                <section id="pantallaResultados" hidden>
+                    <p id="resultadoFinal"></p>
+                    <p id="respuestasCorrectas"></p>
+                    <button type="button" id="botonReiniciar"><strong>Jugar nuevamente</strong></button>
                 </section>
             </main>
             <!--PIE DE PAGINA-->
