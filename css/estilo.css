@@ -83,7 +83,7 @@ article {
     text-align: left;
     padding: 1rem;
     margin: 1rem;
-    position: relative; /* <--- AQUÍ ESTÁ EL CAMBIO CLAVE PARA ANCLAR EL BADGE */
+    position: relative;
 }
 
 /* Extras */
@@ -268,7 +268,6 @@ button:hover {
     padding: 2rem;
     border-radius: 0.5rem;
     text-align: center;
-    max-width: 500px;
     margin: 2rem auto;
 }
 

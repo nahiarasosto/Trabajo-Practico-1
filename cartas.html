@@ -72,10 +72,15 @@
                 </section>
 
                 <!-- JUEGO -->
-                <section class="seccionJuego">
-                    <h2 class="tituloJuego">¡A jugar!</h2>
-                    <div class="contenedorJuego">
-                        <p class="avisoTurno"></p>
+
+            <section class="seccionJuego">
+                <h2 class="tituloJuego">¡A jugar!</h2>
+                <div class="contenedorJuego">
+
+                    <p class="avisoTurno"></p>
+                    
+                    <!-- JUGADOR HUMANO -->
+
                         <article class="contenedorJugador">
                             <h3>VOS</h3>
                             <div class="casitaJugador">
@@ -91,6 +96,9 @@
                                 <button type="button" class="botonDescartar">Descartar</button>
                             </div>
                         </article>
+
+                    <!-- MESA -->
+
                         <article class="contenedorMesa">
                             <h4>MESA</h4>
                             <div class="mesaCartas">
@@ -98,7 +106,10 @@
                                 <div class="cartasCasitaContenedor" id="cartasMesa"></div>
                             </div>
                         </article>
-                        <article class="contenedorIA">
+
+                    <!-- JUGADOR IA -->
+
+                    <article class="contenedorIA">
                             <h5>IA</h5>
                             <div class="casitaIA">
                                 <p>CASITA DE LA IA (0 cartas)</p>
@@ -112,6 +123,7 @@
                 </section>
 
                 <!-- PANTALLA FIN DE JUEGO -->
+
                 <section id="seccionGameOver" class="seccionGameOver">
                     <h5>¡Partida Concluida!</h5>
                     <p id="resultadoTexto"></p>
@@ -122,10 +134,12 @@
             <!-- PIE DE PAGINA -->
 
             <footer class="piedepagina">
-                <address>Estas interesadx en contratarnos para un evento? Para contactarse con nosotros escribe a <a
-                        href="mailto:cachinEventos@gmail.com">cachinEventos@gmail.com</a></address>
-            </footer>
-        </div>
-        <script src="js/cartas.js"></script>
-    </body>
+            <address>Estas interesadx en contratarnos para un evento? Para contactarse con nosotros escribe a <a
+                    href="mailto:cachinEventos@gmail.com">cachinEventos@gmail.com</a></address>
+                    <p>Las cartas utilizadas fueron diseñadas por Basquetteur y vectorizadas por gjenkins20. Bajo licencia CC BY-SA 3.0.</p>
+        </footer>
+    </div>
+    <script src="js/cartas.js"></script>
+</body>
+
 </html>

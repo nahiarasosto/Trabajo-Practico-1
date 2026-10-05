@@ -25,6 +25,8 @@ const seccionGameOver = document.querySelector('.seccionGameOver');
 const manoJugador = document.querySelector('#manoJugador');
 const avisoTurno = document.querySelector('.avisoTurno');
 
+//Oculta la sección del juego y la del Game Over
+
 seccionJuego.style.display = 'none';
 seccionGameOver.style.display = 'none';
 
@@ -39,6 +41,7 @@ botonDescartar.addEventListener('click', descartarCarta);
 /* Preparación de la partida: mazos y reparto de cartas */
 
 function iniciarPartida() {
+
     botonComenzar.disabled = true;
     seccionGameOver.style.display = 'none';
 
@@ -86,6 +89,7 @@ function iniciarPartida() {
 }
 
 /* Reparte seis cartas a cada jugador */
+
 function repartirRonda() {
     if (juego.mazo.length >= 12) {
         for (let i = 0; i < 6; i++) {
@@ -116,6 +120,9 @@ function robarDeMesa() {
         return;
     }
 
+//Busca la carta seleccionada en la mano del jugador
+//y verifica si hay una carta con el mismo número en la mesa
+
     const cartaMano = juego.jugador.mano[juego.posicionCartaSeleccionada];
     let posicionMesa = -1;
     for (let i = 0; i < juego.mesa.length; i++) {
@@ -124,6 +131,9 @@ function robarDeMesa() {
             break;
         }
     }
+
+//Si encuentra una carta en la mesa con el mismo número,
+//la roba y la agrega a la casita del jugador
 
     if (posicionMesa !== -1) {
         const cartaMesa = juego.mesa[posicionMesa];
@@ -136,7 +146,7 @@ function robarDeMesa() {
     }
 }
 
-//Comprueba si la carta seleccionada coincide con el tope de la casita de la IA
+//Comprueba si la carta seleccionada coincide con el "tope" de la casita de la IA
 
 function robarCasitaIA() {
     if (!juego.esTurnoJugador) return;
@@ -189,7 +199,7 @@ function finalizarTurnoHumano() {
     pasarTurnoIA();
 }
 
-/* Acciones de la IA */
+/* Pasar el turno a la IA */
 
 function pasarTurnoIA() {
     juego.esTurnoJugador = false;
@@ -202,11 +212,11 @@ function pasarTurnoIA() {
         juego.esTurnoJugador = true;
         comprobarRondas();
         actualizarInterfaz();
-    }, 3000);
+    }, 2000);
 }
 
 /* Acciones de la IA */
-//Comprueba si puede robar una casita, sino una carta de la mesa y, sino descarta
+//Comprueba si puede robar una casita, sino una carta de la mesa y sino, descarta
 
 function ejecutarIA() {
     for (let i = 0; i < juego.ia.mano.length; i++) {
@@ -253,7 +263,7 @@ function ejecutarIA() {
 }
 
 /* Control de rondas */
-//si ambos jugadores se quedaron sin cartas, la ronda termina y se reparten nuevas cartas, sino se termina el juego
+//si ambos jugadores se quedaron sin cartas, la ronda termina y se reparten nuevas cartas
 
 function comprobarRondas() {
     if (juego.jugador.mano.length === 0 && juego.ia.mano.length === 0) {
@@ -291,17 +301,18 @@ function evaluarFinDeJuego() {
 
     document.querySelector('#resultadoTexto').innerHTML = textoResultado;
 
-//Muestra la sección de Game Over/Resultados y oculta la sección de juego
+//Muestra la sección de Game Over/Resultados y oculta la sección del juego,
+//También habilita el botón de comenzar para iniciar una nueva partida
 
     seccionJuego.style.display = 'none';
     seccionGameOver.style.display = 'block';
     botonComenzar.disabled = false;
 
-//Inserta el resultado en el historial, ordenado por puntaje del jugador
+//Inserta el resultado en el historial
 
     let records = JSON.parse(localStorage.getItem('recordsCasitaRobada')) || [];
 
-//Crea un objeto con la información de la partida actual
+//Crea un objeto con la información de la partida jugada
 
     let nuevaPartida = {
         cartasJugador: puntajeJugador,
@@ -339,6 +350,7 @@ function actualizarInterfaz() {
     actualizarAvisoTurno();
     document.querySelector('#contenedorMazo').textContent = 'Cartas restantes en el mazo: ' + juego.mazo.length;
 
+//"Dibuja" la mano del jugador y la de la IA, la mesa y las casitas
 
     let contenidoManoJugador = '<p>TU MANO</p>';
     for (let i = 0; i < juego.jugador.mano.length; i++) {
