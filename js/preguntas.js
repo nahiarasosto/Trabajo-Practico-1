@@ -33,6 +33,7 @@ let preguntaActual = 0;
 let puntaje = 0;
 let correctas = 0;
 let incorrectas = 0;
+let preguntaResuelta = false;
 
 let tiempo = 15;
 let timer;
@@ -123,8 +124,6 @@ async function cargarPreguntas() {
 
         }));
 
-        console.log(preguntas);
-
         // Reiniciamos los valores del juego
 
         preguntaActual = 0;
@@ -156,6 +155,7 @@ async function cargarPreguntas() {
 function mostrarPregunta() {
 
     const actual = preguntas[preguntaActual];
+    preguntaResuelta = false;
 
     progreso.textContent = `Pregunta ${preguntaActual + 1} de ${preguntas.length}`;
 
@@ -221,6 +221,8 @@ function iniciarTemporizador() {
 
 function responder(eleccion) {
 
+    if (preguntaResuelta) return;
+    preguntaResuelta = true;
     clearInterval(timer);
 
     const actual = preguntas[preguntaActual];
@@ -273,6 +275,9 @@ function responder(eleccion) {
 
 function tiempoAgotado() {
 
+    if (preguntaResuelta) return;
+    preguntaResuelta = true;
+
     const actual = preguntas[preguntaActual];
 
     const botones = document.querySelectorAll('#opciones button');
@@ -312,6 +317,8 @@ function mostrarBotonSiguiente() {
 // AVANZAR
 
 function avanzarPregunta() {
+
+    if (!preguntaResuelta) return;
 
     preguntaActual++;
 

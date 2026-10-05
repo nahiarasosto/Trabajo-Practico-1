@@ -37,6 +37,31 @@ estadisticas.innerHTML = `
 lista.innerHTML = records || '<li>Todavía no hay partidas registradas</li>';
 
 
+/* Juego de preguntas */
+//Todos los datos capturados del juego de preguntas
+
+const partidasTrivia = JSON.parse(localStorage.getItem('registrosTrivia')) || [];
+const estadisticasPreguntas = document.querySelector('#estadisticasPreguntas');
+const listaPreguntas = document.querySelector('#listaRecordsPreguntas');
+
+//Si hay elementos en el HTML, actualiza las estadísticas y la lista de partidas
+
+if (estadisticasPreguntas && listaPreguntas) {
+    estadisticasPreguntas.textContent = `Partidas registradas: ${partidasTrivia.length}`;
+    let registrosTriviaHTML = '';
+
+    if (partidasTrivia.length === 0) {
+        registrosTriviaHTML = '<li>Todavía no hay partidas registradas</li>';
+    } else {
+        for (let i = 0; i < partidasTrivia.length; i++) {
+            const partida = partidasTrivia[i];
+            registrosTriviaHTML += `<li>Partida #${i + 1}: ${Number(partida.puntaje)} puntos - ${Number(partida.correctas)} correctas, ${Number(partida.incorrectas)} incorrectas</li>`;
+        }
+    }
+
+    listaPreguntas.innerHTML = registrosTriviaHTML;
+}
+
 
 
 /* Juego de dados */
