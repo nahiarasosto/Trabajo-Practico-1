@@ -5,7 +5,7 @@ const partidas = JSON.parse(localStorage.getItem('recordsCasitaRobada')) || [];
 const estadisticas = document.querySelector('#estadisticasCartas');
 const lista = document.querySelector('#listaRecordsCartas');
 
-//Variablescontador para victorias, empates, derrotas, mejor puntaje y records
+//Variables contador para victorias, empates, derrotas, mejor puntaje y records
 
 let victorias = 0;
 let empates = 0;

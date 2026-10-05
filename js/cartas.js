@@ -355,23 +355,7 @@ function actualizarInterfaz() {
     let contenidoManoJugador = '<p>TU MANO</p>';
     for (let i = 0; i < juego.jugador.mano.length; i++) {
         const carta = juego.jugador.mano[i];
-        let clase = '';
-
-        if (juego.posicionCartaSeleccionada === i) {
-            clase = 'seleccionada';
-
-            let coincideMesa = false;
-            for (let j = 0; j < juego.mesa.length; j++) {
-                if (juego.mesa[j].numero === carta.numero) {
-                    coincideMesa = true;
-                    break;
-                }
-            }
-            const topeIA = juego.ia.casita[juego.ia.casita.length - 1];
-            if (coincideMesa || (topeIA && topeIA.numero === carta.numero)) {
-                clase += ' conJugada';
-            }
-        }
+        const clase = juego.posicionCartaSeleccionada === i ? 'seleccionada' : '';
 
         contenidoManoJugador += '<div class="cartaVisual ' + clase + '">';
         contenidoManoJugador += '<img src="' + carta.img + '" alt="Carta ' + carta.numero + '"></div>';

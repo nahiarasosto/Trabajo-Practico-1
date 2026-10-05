@@ -239,6 +239,12 @@ button:hover {
     height: auto;
 }
 
+.manoJugador .cartaVisual.seleccionada img {
+    box-sizing: border-box;
+    border: 0.15rem solid rgb(255, 214, 102);
+    border-radius: 0.35rem;
+}
+
 .casitaJugador p,
 .casitaIA p,
 .manoJugador p,
