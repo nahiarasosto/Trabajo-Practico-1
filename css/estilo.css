@@ -109,7 +109,7 @@ button:hover {
     background-color: rgb(94, 94, 240);
     color: white;
 }
-img{
+.imagenesCentrado{
     display: block;
     margin: auto;
     border-radius:0.5rem;
@@ -147,6 +147,8 @@ img{
 
 .columnas {
     display: flex;
+    text-align: left;
+    align-items: center;
 }
 
 /* pie de página */
