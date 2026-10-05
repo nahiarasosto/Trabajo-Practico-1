@@ -40,14 +40,18 @@ La partida termina cuando ambos se quedan sin cartas y quedan menos de 12 cartas
 Las cartas utilizadas fueron diseñadas por Basquetteur y vectorizadas por gjenkins20. Bajo licencia CC BY-SA 3.0.  
 
 ### Juego de dados
-
+El juego de cartas es un juego de azar hecho y derecho, en el que todo depende de la suerte del usuario.  
+Reglas y Funcionamiento  
+- Se tiran 2 dados al mismo tiempo.  
+- Cada suma de 7 o más aumenta tu racha de victorias.
+- Meta del juego: conseguir 5 rachas seguidas para ganar la partida completa. Si obtienes menos de 7 en una tirada, ¡la racha se reinicia a 0!
 
 ## Organización de archivos y carpetas
-Trabajo-Practico-1
+Trabajo-Practico-1  
 cartas.html, dados.html, index.html, integrantes.html, preguntas.html, tablero.html, README.md  
 css: estilos.css  
 imagenes: imgJuegoCartas, imgDados, fondo-3,jpg, iconMai.jpg, iconMari.jpg, iconNahi.jpg  
-js: cartas.js, dados.js, preguntas.js, script.js, tablero.js  
+js: cartas.js, dados.js, preguntas.js, tablero.js  
 
 ## Tecnologías utilizadas
 VScode  Copilot SDK, Chat GPT, Gemini
