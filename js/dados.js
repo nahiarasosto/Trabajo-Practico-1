@@ -1,6 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
-
-    // Variables
+// Variables
     let rachaActual = 0;
     const metaRacha = 5; // Cantidad de victorias seguidas necesarias para completar el objetivo
 
@@ -112,4 +110,3 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }
     }
-});

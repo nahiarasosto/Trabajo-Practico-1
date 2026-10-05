@@ -302,8 +302,8 @@ button:hover {
 .dados-container {
     display: flex;
     justify-content: center;
-    gap: 30px;
-    margin: 25px 0;
+    gap: 1rem;            
+    margin: 1.5rem 0;     
 }
 
 .dado-box {
@@ -313,17 +313,18 @@ button:hover {
 }
 
 .dado-box img {
-    width: 90px;
-    height: 90px;
+    width: 5.625rem;      
+    height: 5.625rem;     
     object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    margin-top: 8px;
+    border-radius: 0.5rem; 
+    box-shadow: 0 0.25rem 0.625rem rgba(0,0,0,0.3); 
+    margin-top: 0.5rem;   
 }
+
 /* --- Transicion suave--- */
 #juego-container {
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateY(-0.625rem); 
     transition: opacity 0.5s ease, transform 0.5s ease;
     max-height: 0;
     overflow: hidden;
@@ -332,8 +333,9 @@ button:hover {
 #juego-container.activo {
     opacity: 1;
     transform: translateY(0);
-    max-height: 300px;
+    max-height: 18.75rem; 
 }
+
 /* --- Animación simple de giro para los dados --- */
 @keyframes girar {
     from {
@@ -351,16 +353,16 @@ button:hover {
 /* --- Estilo y posición del contador de racha (Arriba a la derecha) --- */
 .badge-racha {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 1.25rem;         
+    right: 1.25rem;       
     background-color: rgb(155, 155, 220);
     color: rgb(31, 31, 81);
-    padding: 12px 24px; /* Aumenta el relleno: más alto y más ancho */
-    border-radius: 30px; /* Bordes más redondeados para que luzca bien */
+    padding: 0.75rem 1.5rem; 
+    border-radius: 1.875rem; 
     font-weight: bold;
-    font-size: 1.25rem; /* Letra más grande */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    pointer-events: none; /* Evita que bloquee clics */
+    font-size: 1.25rem; 
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.3);
+    pointer-events: none;
 }
 
 /* --- Animación de rebote para la racha --- */
@@ -375,18 +377,19 @@ button:hover {
 .animar-rebote {
     animation: rebote 0.5s ease;
 }
+
 /* --- Pantalla de Victoria --- */
 .pantalla-victoria {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100%;          
+    height: 100%;         
     background-color: rgba(15, 15, 35, 0.95);
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 12px;
+    border-radius: 0.75rem; 
     z-index: 20;
     transition: opacity 0.4s ease;
 }
@@ -397,18 +400,17 @@ button:hover {
 
 .victoria-contenido {
     text-align: center;
-    padding: 20px;
-    color: rgb(255, 215, 0); /* Tono dorado */
+    padding: 1.25rem;     
+    color: rgb(255, 215, 0);
 }
 
 .victoria-contenido h2 {
     font-size: 2rem;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
 }
 
 .victoria-contenido p {
     color: rgb(155, 155, 220);
     font-size: 1.1rem;
-    margin-bottom: 20px;
-    color: rgb(155, 155, 220);
+    margin-bottom: 1.25rem; 
 }
