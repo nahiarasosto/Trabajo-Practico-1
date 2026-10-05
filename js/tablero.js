@@ -35,3 +35,44 @@ estadisticas.innerHTML = `
 //Mensaje por si no hay partidas registradas
 
 lista.innerHTML = records || '<li>Todavía no hay partidas registradas</li>';
+
+
+
+
+/* Juego de dados */
+document.addEventListener("DOMContentLoaded", () => {
+    // 1. Recuperar los datos guardados en el localStorage
+    const partidas = JSON.parse(localStorage.getItem('recordsDados')) || [];
+    
+    // 2. Seleccionar los elementos del HTML del tablero
+    const estadisticas = document.querySelector('#estadisticasDados');
+    const lista = document.querySelector('#listaRecordsDados');
+
+    // 3. Variables para contadores
+    let totalVictorias = 0;
+    let recordsHTML = '';
+
+    // 4. Recorrer las partidas guardadas
+    for (let i = 0; i < partidas.length; i++) {
+        const partida = partidas[i];
+
+        if (partida.resultado === 'Ganaste') {
+            totalVictorias++;
+        }
+
+        // Armar cada elemento de la lista detallada
+        recordsHTML += `<li>Partida #${i + 1} - Resultado: ${partida.resultado} (Racha: ${partida.rachaFinal}) - Fecha: ${partida.fecha}</li>`;
+    }
+
+    // 5. Actualizar el HTML con las estadísticas generales
+    if (estadisticas) {
+        estadisticas.innerHTML = `
+            <p><strong>Total de partidas ganadas:</strong> ${totalVictorias}</p>
+        `;
+    }
+
+    // 6. Actualizar la lista o mostrar mensaje si está vacío
+    if (lista) {
+        lista.innerHTML = recordsHTML || '<li>Todavía no hay partidas registradas</li>';
+    }
+});

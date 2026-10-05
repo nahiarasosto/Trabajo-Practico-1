@@ -52,6 +52,17 @@ document.addEventListener("DOMContentLoaded", () => {
                     
                     // Comprobar si llegó a la meta
                     if (rachaActual >= metaRacha) {
+                        
+                        // --- AQUÍ SE GUARDA LA PARTIDA GANADA EN EL LOCALSTORAGE ---
+                        const partidasGuardadas = JSON.parse(localStorage.getItem('recordsDados')) || [];
+                        partidasGuardadas.push({
+                            resultado: 'Ganaste',
+                            rachaFinal: rachaActual,
+                            fecha: new Date().toLocaleDateString()
+                        });
+                        localStorage.setItem('recordsDados', JSON.stringify(partidasGuardadas));
+                        // ----------------------------------------------------------------
+
                         // Mostrar pantalla de victoria
                         if (pantallaVictoria) {
                             pantallaVictoria.classList.remove("oculto");
