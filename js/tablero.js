@@ -65,39 +65,37 @@ if (estadisticasPreguntas && listaPreguntas) {
 
 
 /* Juego de dados */
-document.addEventListener("DOMContentLoaded", () => {
-    // 1. Recuperar los datos guardados en el localStorage
-    const partidas = JSON.parse(localStorage.getItem('recordsDados')) || [];
-    
-    // 2. Seleccionar los elementos del HTML del tablero
-    const estadisticas = document.querySelector('#estadisticasDados');
-    const lista = document.querySelector('#listaRecordsDados');
+//todos los datos capturados del juego de dados
 
-    // 3. Variables para contadores
-    let totalVictorias = 0;
-    let recordsHTML = '';
+const partidasDados = JSON.parse(localStorage.getItem('recordsDados')) || [];
+const estadisticasDados = document.querySelector('#estadisticasDados');
+const listaRecordsDados = document.querySelector('#listaRecordsDados');
 
-    // 4. Recorrer las partidas guardadas
-    for (let i = 0; i < partidas.length; i++) {
-        const partida = partidas[i];
+let totalVictoriasDados = 0;
+let recordsDadosHTML = '';
 
-        if (partida.resultado === 'Ganaste') {
-            totalVictorias++;
-        }
+//Recorre las partidas para actualizar las estadísticas y records
 
-        // Armar cada elemento de la lista detallada
-        recordsHTML += `<li>Partida #${i + 1} - Resultado: ${partida.resultado} (Racha: ${partida.rachaFinal}) - Fecha: ${partida.fecha}</li>`;
-    }
+for (let i = 0; i < partidasDados.length; i++) {
+    const partida = partidasDados[i];
 
-    // 5. Actualizar el HTML con las estadísticas generales
-    if (estadisticas) {
-        estadisticas.innerHTML = `
-            <p><strong>Total de partidas ganadas:</strong> ${totalVictorias}</p>
-        `;
-    }
+    if (partida.resultado === 'Ganaste') totalVictoriasDados++;
 
-    // 6. Actualizar la lista o mostrar mensaje si está vacío
-    if (lista) {
-        lista.innerHTML = recordsHTML || '<li>Todavía no hay partidas registradas</li>';
-    }
-});
+    recordsDadosHTML += `
+        <li>Partida #${i + 1} - Resultado: ${partida.resultado}
+        (Racha: ${partida.rachaFinal}) - Fecha: ${partida.fecha}</li>
+    `;
+}
+
+//Si hay elementos en el HTML, actualiza las estadísticas y la lista de partidas
+
+if (estadisticasDados && listaRecordsDados) {
+    estadisticasDados.innerHTML = `
+        <p><strong>Total de partidas ganadas:</strong> ${totalVictoriasDados}</p>
+    `;
+
+//Mensaje por si no hay partidas registradas
+
+    listaRecordsDados.innerHTML =
+        recordsDadosHTML || '<li>Todavía no hay partidas registradas</li>';
+}
